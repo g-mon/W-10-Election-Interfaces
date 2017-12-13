@@ -1,7 +1,11 @@
 /*
 import java.util.Set;
 public class PollingStation implements PollingStationInterface{
+    private String staName;
+    private String staAddress;
+    
     public PollingStation(String staName){
+        this.staName=staName;
     }
     
     public Set<VoteInterface> getVotes(){
@@ -23,15 +27,19 @@ public class PollingStation implements PollingStationInterface{
     }
     
     public String getAdress(){
+        return staAddress;
     }
     
     public void setAddress(String address){
+        staAddress=address;
     }
     
     public String getName(){
+        return staName;
     }
     
     public void setName(String name){
+        staName=name;
     }
     
     public int voteCount(CandidateInterface candidate){
