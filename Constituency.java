@@ -1,7 +1,10 @@
-/**
+/*
 import java.util.Set;
 public class Constituency implements ConstituencyInterface{
-    public Constituency(){
+    private String conName;
+    
+    public Constituency(String conName){
+        this.conName=conName;
     }
     
     public Set<CandidateInterface> getCandidates(){
@@ -17,9 +20,11 @@ public class Constituency implements ConstituencyInterface{
     }
     
     public String getName(){
+        return name;
     }
     
     public void setName(String name){
+        conName=name;
     }
     
     public int voteCount(CandidateInterface candidate){
@@ -28,6 +33,6 @@ public class Constituency implements ConstituencyInterface{
     public CandidateInterface winner(){
     }
 }
-**/
+*/
 
     

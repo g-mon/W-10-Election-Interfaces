@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=candName
+comment0.target=Candidate(java.lang.String)
+comment1.params=
+comment1.target=PartyInterface\ getParty()
+comment2.params=party
+comment2.target=void\ setParty(PartyInterface)
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment4.params=
+comment4.target=boolean\ isIndependent()
+numComments=5
