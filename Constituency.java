@@ -1,4 +1,4 @@
-/*
+
 import java.util.Set;
 import java.util.HashSet;
 public class Constituency implements ConstituencyInterface{
@@ -35,11 +35,28 @@ public class Constituency implements ConstituencyInterface{
     }
     
     public int voteCount(CandidateInterface candidate){
+        //for each polling station in the constituency, get votes for that candidate   
+        int count = 0;
+        HashSet<VoteInterface> staVotes;
+        for(PollingStationInterface p: stasInCon){
+            count+=p.voteCount(candidate);
+        }
+        return count;
     }
     
     public CandidateInterface winner(){
+        //Run voteCount on each candidate, local variable for leader so far
+        //Not sure how to initialise leader but this was covered in an earlier lecture, the one about iterators most likely, look to notes as I don't think null is satisfactory for some reason
+        CandidateInterface leader;
+        leader = null;
+        for(CandidateInterface c: candsInCon){
+            if(voteCount(c)>voteCount(leader)){
+                leader=c;
+            }
+        }
+        return leader;
     }
 }
-*/
+
 
     

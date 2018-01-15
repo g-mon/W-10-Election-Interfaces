@@ -1,9 +1,11 @@
 public class Voter implements VoterInterface{
     private String votrName;
     private String poCo;
+
     
     public Voter(String votrName){
         this.votrName=votrName;
+
     }
     
     public String getPostcode(){
@@ -21,4 +23,7 @@ public class Voter implements VoterInterface{
     public void setName(String name){
         votrName=name;
     }
+    
+
+    
 }
