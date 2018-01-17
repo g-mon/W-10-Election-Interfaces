@@ -37,7 +37,7 @@ public class Constituency implements ConstituencyInterface{
     public int voteCount(CandidateInterface candidate){
         //for each polling station in the constituency, get votes for that candidate   
         int count = 0;
-        HashSet<VoteInterface> staVotes;
+        
         for(PollingStationInterface p: stasInCon){
             count+=p.voteCount(candidate);
         }

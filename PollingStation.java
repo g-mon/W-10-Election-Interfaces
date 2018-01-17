@@ -22,19 +22,30 @@ public class PollingStation implements PollingStationInterface{
         //find them in regdVoters and they must not be in votedVoters, start the boolean true set it false if either condition violated
         boolean canVote=true;
         //check for htem in regdVoters
+        for(VoterInterface v: regdVoters){
+            if(v==voter){
+                canVote=false;
+            }
+        }
        
         
         //check for them in votedVoters
+        for(VoterInterface v: votedVoters){
+            if(v==voter){
+                canVote=false;
+            }
+        }
 
         
         return canVote;
     }
     
     public void vote(VoteInterface vote, VoterInterface voter){
-        //unfinished
+        //is there something else to do here?
         
         //set the voter's alreadyVoted value to true for the sake of the canVote method
         votedVoters.add(voter);
+        votesCast.add(vote);
         
     }
     
@@ -67,7 +78,7 @@ public class PollingStation implements PollingStationInterface{
         //return votes cast, add one to total if it is for the given candidate
         int total=0;
         for(VoteInterface v: votesCast){
-            if( v.getCandidate()==candidate){
+            if(v.getCandidate()==candidate){
                 total+=1;
             }
         }
