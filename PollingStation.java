@@ -8,8 +8,9 @@ public class PollingStation implements PollingStationInterface{
     private HashSet<VoterInterface> votedVoters = new HashSet<VoterInterface>();
     private HashSet<VoteInterface> votesCast = new HashSet<VoteInterface>();
     
-    public PollingStation(String staName){
+    public PollingStation(String staName, String address){
         this.staName=staName;
+        address=staAddress;
     }
     
     public Set<VoteInterface> getVotes(){
