@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import java.util.HashSet;
 
 /**
  * The test class Setup.
@@ -43,6 +44,7 @@ public class Setup
     @Test
     public void FirstTry()
     {
+        
         Voter voter1 = new Voter("alice");
         Voter voter2 = new Voter("bob");
         Voter voter3 = new Voter("charlie");
@@ -141,11 +143,75 @@ public class Setup
         constituency3.addCandidate(candidate8);
         constituency3.addCandidate(candidate9);
         
-        PollingStation1.canVote(voter4);
+        //build all the votes, vote1 cast by voter1 etc
+        Vote vote1= new Vote();
+        vote1.addCandidate(candidate2);
+        Vote vote2= new Vote();
+        vote2.addCandidate(candidate2);
+        Vote vote3= new Vote();
+        vote3.addCandidate(candidate3);
+        Vote vote4= new Vote();
+        vote4.addCandidate(candidate1);
+        Vote vote5= new Vote();
+        vote5.addCandidate(candidate1);
+        Vote vote6= new Vote();
+        vote6.addCandidate(candidate1);
+        Vote vote7= new Vote();
+        vote7.addCandidate(candidate4);
+        Vote vote8= new Vote();
+        vote8.addCandidate(candidate5);
+        Vote vote9= new Vote();
+        vote9.addCandidate(candidate6);
+        Vote vote10= new Vote();
+        vote10.addCandidate(candidate5);
+        Vote vote11= new Vote();
+        vote11.addCandidate(candidate6);
+        Vote vote12= new Vote();
+        vote12.addCandidate(candidate6);
+        Vote vote13= new Vote();
+        vote13.addCandidate(candidate7);
+        Vote vote14= new Vote();
+        vote14.addCandidate(candidate8);
+        Vote vote15= new Vote();
+        vote15.addCandidate(candidate7);
+        Vote vote16= new Vote();
+        vote16.addCandidate(candidate7);
+        Vote vote17= new Vote();
+        vote17.addCandidate(candidate7);
+        Vote vote18= new Vote();
+        vote18.addCandidate(candidate7);
+        
+        PollingStation1.vote(vote1,voter1);
+        PollingStation1.vote(vote2,voter2);
+        PollingStation1.vote(vote3,voter3);
+        PollingStation2.vote(vote4,voter4);
+        PollingStation2.vote(vote5,voter5);
+        PollingStation2.vote(vote6,voter6);
+        PollingStation3.vote(vote7,voter7);
+        PollingStation3.vote(vote8,voter8);
+        PollingStation3.vote(vote9,voter9);
+        PollingStation4.vote(vote10,voter10);
+        PollingStation4.vote(vote11,voter11);
+        PollingStation4.vote(vote12,voter12);
+        PollingStation5.vote(vote13,voter13);
+        PollingStation5.vote(vote14,voter14);
+        PollingStation5.vote(vote15,voter15);
+        PollingStation6.vote(vote16,voter16);
+        PollingStation6.vote(vote17,voter17);
+        PollingStation6.vote(vote18,voter18);
+        
+        
+        
+        String name = new String();
+        Candidate candidate12 = new Candidate("Bob");
+        
+        System.out.println(""+candidate12.isIndependent());
         
        
         
-        
+       
     }
+
+        
 }
 
