@@ -160,6 +160,7 @@ public class ElectionTest
         System.out.println(c2);
         System.out.println(c3);
         System.out.println(c4);
+        assertEquals(c1, winner);
     }
 
     @Test
