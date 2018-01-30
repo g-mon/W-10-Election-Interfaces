@@ -151,7 +151,7 @@ public class Setup
         Vote vote3= new Vote();
         vote3.addCandidate(candidate3);
         Vote vote4= new Vote();
-        vote4.addCandidate(candidate1);
+        vote4.addCandidate(candidate3);
         Vote vote5= new Vote();
         vote5.addCandidate(candidate1);
         Vote vote6= new Vote();
@@ -200,12 +200,11 @@ public class Setup
         PollingStation6.vote(vote17,voter17);
         PollingStation6.vote(vote18,voter18);
         
-        
-        
+        party1.setLeader(candidate2);
+        System.out.println(""+PollingStation1.voteCount(candidate2));
+        //System.out.println(""+election1.seatCount(party3));
+        //System.out.println(""+election1.leader().getName());
         String name = new String();
-        Candidate candidate12 = new Candidate("Bob");
-        
-        System.out.println(""+candidate12.isIndependent());
         
        
         

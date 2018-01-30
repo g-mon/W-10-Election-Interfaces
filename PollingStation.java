@@ -8,9 +8,9 @@ public class PollingStation implements PollingStationInterface{
     private HashSet<VoterInterface> votedVoters = new HashSet<VoterInterface>();
     private HashSet<VoteInterface> votesCast = new HashSet<VoteInterface>();
     
-    public PollingStation(String staName, String address){
+    public PollingStation(String staName){
         this.staName=staName;
-        address=staAddress;
+        staAddress=null;
     }
     
     public Set<VoteInterface> getVotes(){
@@ -22,11 +22,15 @@ public class PollingStation implements PollingStationInterface{
         //true iff voter is registered and has not voted yet
         //find them in regdVoters and they must not be in votedVoters, start the boolean true set it false if either condition violated
         boolean canVote=true;
+        int count = 0;
         //check for htem in regdVoters
         for(VoterInterface v: regdVoters){
             if(v==voter){
-                canVote=false;
+                count=1;
             }
+        }
+        if(count!=1){
+            canVote=false;
         }
        
         
